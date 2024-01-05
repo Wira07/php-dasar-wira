@@ -14,7 +14,7 @@ Footer content: Copyright information and social media links (LinkedIn).
 ## Purpose
 
 This screenshot serves as a visual reference for:
-![Alt Text]([https://github.com/Wira07/php-dasar-wira/blob/master/pertemuan_5/images/Form%20Login.png?raw=true]([http://localhost/php-dasar-wira/pertemuan_5/images/1.png](https://github.com/Wira07/php-dasar-wira/blob/master/pertemuan_5/images/Form%20Login.png?raw=true)))
+![Alt Text](https://github.com/Wira07/php-dasar-wira/blob/master/pertemuan_5/images/Form%20Login.png?raw=true)
 
 Design discussions: Facilitating discussions about the sign up page's layout, content, and overall user experience.
 Documentation: Preserving a snapshot of the page's appearance for future reference or historical tracking.
