@@ -15,6 +15,11 @@ Footer content: Copyright information and social media links (LinkedIn).
 
 This screenshot serves as a visual reference for:
 ![Alt Text](https://github.com/Wira07/php-dasar-wira/blob/master/pertemuan_5/images/Form%20Login.png?raw=true)
+![Alt Text]([https://github.com/Wira07/php-dasar-wira/blob/master/pertemuan_5/images/Form%20Login.png?raw=true](https://github.com/Wira07/php-dasar-wira/blob/master/pertemuan_6/gambar/Dashboard.png?raw=true))
+![Alt Text]([https://github.com/Wira07/php-dasar-wira/blob/master/pertemuan_5/images/Form%20Login.png?raw=true](https://github.com/Wira07/php-dasar-wira/blob/master/pertemuan_6/gambar/Daftar%20Mahasiswa.png?raw=true))
+![Alt Text](https://github.com/Wira07/php-dasar-wira/blob/master/pertemuan_6/gambar/Daftar%20Pegawai.png?raw=true)
+![Alt Text](https://github.com/Wira07/php-dasar-wira/blob/master/pertemuan_6/gambar/Jadwal%20Kuliah.png?raw=true)
+![Alt Text](https://github.com/Wira07/php-dasar-wira/blob/master/pertemuan_6/gambar/Nilai%20Mahasiswa.png?raw=true)
 
 Design discussions: Facilitating discussions about the sign up page's layout, content, and overall user experience.
 Documentation: Preserving a snapshot of the page's appearance for future reference or historical tracking.
