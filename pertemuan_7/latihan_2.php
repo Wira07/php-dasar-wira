@@ -40,7 +40,11 @@ $mahasiswa = [
         <li><?= $mhs["nama"]; ?></li>
         <ul>
             <li>
-                <a href="latihan_3.php?nama=<?= $mhs["nama"]; ?>&nrp=<?= $mhs["nrp"]; ?>&email=<?= $mhs["email"]; ?>&jurusan=<?= $mhs["jurusan"]; ?>&gambar=<?= $mhs["gambar"]; ?>"><?= $mhs["nama"]; ?></a>
+                <a href="latihan_3.php?nama=<?= $mhs["nama"]; ?>
+                &nrp=<?= $mhs["nrp"]; ?>&email=<?= $mhs["email"]; ?>
+                &jurusan=<?= $mhs["jurusan"]; ?>
+                &gambar=<?= $mhs["gambar"]; ?>">
+                    <?= $mhs["nama"]; ?></a>
                 <a href="latihan_3.php?nama=<?= $mhs["nama"]; ?>"></a>
             </li>
         </ul>
