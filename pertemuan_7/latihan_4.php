@@ -8,6 +8,16 @@
 </head>
 
 <body>
+
+    <?php if (isset($_POST["submit"])) : ?>
+        <h1>Halo, Selamat Datang <?= $_POST["nama"]; ?></h1>
+    <?php endif; ?>
+
+    
+    
+
+
+
     <form action="latihan_5.php" method="post">
         Masukan Nama : <input type="text" name="nama">
         <br><br>

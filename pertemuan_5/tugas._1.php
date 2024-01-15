@@ -35,7 +35,7 @@
                     <div class="input-group mb-3">
                         <input type="text" class="form-control-lg bg-light fs-6" style="width: 500px;" placeholder="Password">
                     </div>
-                    <div class="input-group mb-6 d-flex justify-content-between">
+                    <form action="" class="input-group mb-6 d-flex justify-content-between">
                         <div class="form-check ">
                             <input type="checkbox" class="form-check-input" id="formCheck">
                             <label for="formCheck" class="form-check-label text-secondary "><small>Remember Me</small></label>
@@ -52,7 +52,7 @@
                         <div class="row">
                             <small>Don't Have Account? <a href="#">Sign Up</a></small>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
