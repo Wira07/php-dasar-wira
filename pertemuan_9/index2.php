@@ -22,10 +22,9 @@
     </style>
 
     <?php
-    // koneksi database
-    $conn = mysqli_connect("localhost", "root", "", "wira_sukma_saputra");
-    // ambil data dari table mahasiswa
-    $result = mysqli_query($conn, "SELECT * FROM mahasiswa");
+
+    include "functions.php";
+
     ?>
 </head>
 

@@ -1,3 +1,9 @@
+<?php
+// koneksi database
+include 'functions.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,13 +26,6 @@
             text-decoration: none;
         }
     </style>
-
-    <?php
-    // koneksi database
-    $conn = mysqli_connect("localhost", "root", "", "wira_sukma_saputra");
-    // ambil data dari table mahasiswa
-    $result = mysqli_query($conn, "SELECT * FROM mahasiswa");
-    ?>
 </head>
 
 <body>
@@ -44,7 +43,8 @@
         </tr>
         <!-- looping untuk setiap baris data -->
         <?php $i = 1; ?>
-        <?php while ($row = mysqli_fetch_assoc($result)) : ?>
+
+        <?php foreach ($mahasiswa as $row) : ?>
             <tr>
                 <td><?= $i; ?></td>
                 <td>
@@ -59,24 +59,10 @@
                 <td><?= $row["Prodi"] ?></td>
 
             </tr>
-        <?php endwhile; ?>
+        <?php endforeach; ?>
         <?php $i++; ?>
     </table>
-
-    <?php
-    // if (!$result) {
-    //     echo mysqli_error($conn);
-    // }
-    // ambil data (fetch) mahasiswa dari object result
-    // mysqli_fetch_row() // mengembalikan array numerik
-    // mysqli_fetch_assoc() // mengembalikan array associative
-    // mysqli_fetch_array() // mengembalikan keduanya
-    // mysqli_fetch_object() // mengembalikan object
-
-    // while ($mhs = mysqli_fetch_assoc($result)) {
-    //     var_dump($mhs);
-    // }
-    ?>
+    
 </body>
 
 </html>
