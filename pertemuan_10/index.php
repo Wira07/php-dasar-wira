@@ -1,7 +1,6 @@
 <?php
-// koneksi database
-include 'functions.php';
-
+include 'functions.php'; // Jika ada file functions.php yang berisi definisi fungsi query, pastikan untuk memuatnya di sini.
+$mahasiswa = query("SELECT * FROM mahasiswa");
 ?>
 
 <!DOCTYPE html>
@@ -15,21 +14,42 @@ include 'functions.php';
         body {
             font-family: Arial, Helvetica, sans-serif;
             margin: auto;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             height: 30vh;
+            margin-left: 50px;
             flex-direction: column;
         }
 
         a {
             text-decoration: none;
         }
+
+        h1 {
+            margin-left: 50px;
+        }
+
+        button {
+            margin-bottom: 20px;
+            padding: 10px;
+            color: white;
+            border: none;
+            background-color: #4CAF50;
+            border-radius: 10px;
+            transition: 1s;
+        }
+
+        button:hover {
+            background-color: blueviolet;
+            color: white;
+        }
     </style>
+
 </head>
 
 <body>
     <h1>Daftar Mahasiswa</h1>
+
+    <button><a href="tambah.php">Tambah Data Mahasiswa</a></button>
+
     <table border="1" cellpadding="10" cellspacing="0">
         <tr>
             <th>No.</th>
@@ -39,11 +59,10 @@ include 'functions.php';
             <th>Nim</th>
             <th>Email</th>
             <th>Alamat</th>
-            <th>Email</th>
+            <th>Prodi</th>
         </tr>
         <!-- looping untuk setiap baris data -->
         <?php $i = 1; ?>
-
         <?php foreach ($mahasiswa as $row) : ?>
             <tr>
                 <td><?= $i; ?></td>
@@ -57,12 +76,10 @@ include 'functions.php';
                 <td><?= $row["Email"] ?></td>
                 <td><?= $row["Alamat"] ?></td>
                 <td><?= $row["Prodi"] ?></td>
-
             </tr>
+            <?php $i++; ?>
         <?php endforeach; ?>
-        <?php $i++; ?>
     </table>
-    
 </body>
 
 </html>
