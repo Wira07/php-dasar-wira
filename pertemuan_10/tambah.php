@@ -1,9 +1,21 @@
 <?php
+// include 'functions.php';
 
-include 'functions.php';
+$con = mysqli_connect("localhost", "root", "", "wira_sukma_saputra");
 
-// $con = mysqli_connect("localhost", "root", "", "wira_sukma_saputra");
 if (isset($_POST["submit"])) {
+
+    $Nama = $_POST["Nama"];
+    $Nim = $_POST["Nim"];
+    $Email = $_POST["Email"];
+    $Alamat = $_POST["Alamat"];
+    $Kelas = $_POST["Kelas"];
+    $Prodi = $_POST["Prodi"];
+    $Gambar = $_POST["Gambar"];
+
+    $query = "INSERT INTO mahasiswa VALUES ('', '$Nama', '$Nim', '$Email', '$Alamat', '$Kelas', '$Prodi', '$Gambar')";
+    mysqli_query($con, $query);
+
     if (mysqli_affected_rows($con) > 0) {
         echo "<script>
         alert('Data berhasil ditambahkan');

@@ -1,6 +1,7 @@
 <?php
 include 'functions.php'; // Jika ada file functions.php yang berisi definisi fungsi query, pastikan untuk memuatnya di sini.
 $mahasiswa = query("SELECT * FROM mahasiswa");
+$con = mysqli_connect("localhost", "root", "", "wira_sukma_saputra");
 ?>
 
 <!DOCTYPE html>
