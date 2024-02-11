@@ -31,54 +31,70 @@ if (isset($_POST["submit"])) {
     }
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wira Sukma Saputra</title>
+    <title>Form Tambah Data Mahasiswa</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
         }
 
         .container {
             max-width: 700px;
-            /* Merubah lebar maksimum container */
             margin: 50px auto;
             background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         .carousel-item img {
             max-height: 300px;
             object-fit: cover;
+            border-radius: 8px;
         }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+            transition: background-color 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+
+        .form-label {
+            font-weight: bold;
+        }
+        
     </style>
 </head>
 
 <body>
     <div class="container mt-5">
         <h1 class="text-center mb-4">Tambah Data Mahasiswa</h1>
-
         <form action="" method="post">
-            <!-- Slider Gambar -->
-            <div id="carouselExampleControls" class="carousel slide mb-4" data-bs-ride="carousel">
+            <div id="carouselExampleControls" class="carousel slide mb-4" data-bs-ride="carousel" data-bs-interval="1000">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="https://via.placeholder.com/600x300.png?text=Slide+1" class="d-block w-100" alt="...">
+                        <img src="https://i.pinimg.com/564x/fc/c6/15/fcc615bdcd5734f208d5e63436ffe3ed.jpg" class="d-block w-100" alt="...">
                     </div>
                     <div class="carousel-item">
-                        <img src="https://via.placeholder.com/600x300.png?text=Slide+2" class="d-block w-100" alt="...">
+                        <img src="https://i.pinimg.com/564x/97/c5/d2/97c5d2fc7e2ff589e9d09b9788e6e8fe.jpg" class="d-block w-100" alt="...">
                     </div>
                     <div class="carousel-item">
-                        <img src="https://via.placeholder.com/600x300.png?text=Slide+3" class="d-block w-100" alt="...">
+                        <img src="https://i.pinimg.com/564x/40/e0/d6/40e0d65ed208dcab5b0c7958285e510c.jpg" class="d-block w-100" alt="...">
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -90,51 +106,49 @@ if (isset($_POST["submit"])) {
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
-
-            <!-- Form Tambah Data Mahasiswa -->
             <div class="mb-3 row">
-                <label for="Nama" class="col-sm-2 col-form-label">Nama:</label>
+                <label for="Nama" class="col-sm-2 col-form-label form-label">Nama:</label>
                 <div class="col-sm-10">
                     <input type="text" class="form-control" id="Nama" name="Nama" required>
                 </div>
             </div>
             <div class="mb-3 row">
-                <label for="Nim" class="col-sm-2 col-form-label">Nim:</label>
+                <label for="Nim" class="col-sm-2 col-form-label form-label">Nim:</label>
                 <div class="col-sm-10">
                     <input type="text" class="form-control" id="Nim" name="Nim" required>
                 </div>
             </div>
             <div class="mb-3 row">
-                <label for="Email" class="col-sm-2 col-form-label">Email:</label>
+                <label for="Email" class="col-sm-2 col-form-label form-label">Email:</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="Email" name="Email">
+                    <input type="email" class="form-control" id="Email" name="Email">
                 </div>
             </div>
             <div class="mb-3 row">
-                <label for="Alamat" class="col-sm-2 col-form-label">Alamat:</label>
+                <label for="Alamat" class="col-sm-2 col-form-label form-label">Alamat:</label>
                 <div class="col-sm-10">
                     <input type="text" class="form-control" id="Alamat" name="Alamat">
                 </div>
             </div>
             <div class="mb-3 row">
-                <label for="Kelas" class="col-sm-2 col-form-label">Kelas:</label>
+                <label for="Kelas" class="col-sm-2 col-form-label form-label">Kelas:</label>
                 <div class="col-sm-10">
                     <input type="text" class="form-control" id="Kelas" name="Kelas" required>
                 </div>
             </div>
             <div class="mb-3 row">
-                <label for="Prodi" class="col-sm-2 col-form-label">Prodi:</label>
+                <label for="Prodi" class="col-sm-2 col-form-label form-label">Prodi:</label>
                 <div class="col-sm-10">
                     <input type="text" class="form-control" id="Prodi" name="Prodi">
                 </div>
             </div>
             <div class="mb-3 row">
-                <label for="Gambar" class="col-sm-2 col-form-label">Gambar:</label>
+                <label for="Gambar" class="col-sm-2 col-form-label form-label">Gambar:</label>
                 <div class="col-sm-10">
                     <input type="text" class="form-control" id="Gambar" name="Gambar">
                 </div>
             </div>
-            <div>
+            <div class="text-center">
                 <button type="submit" class="btn btn-primary" name="submit">Tambah Data</button>
             </div>
         </form>
