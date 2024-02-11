@@ -18,17 +18,28 @@ function query($query)
 
 function Tambah($data)
 {
-    global $con;    
-    $Nama = $data["Nama"];
-    $Nim = $data["Nim"];
-    $Email = $data["Email"];
-    $Alamat = $data["Alamat"];
-    $Kelas = $data["Kelas"];
-    $Prodi = $data["Prodi"];
-    $Gambar = $data["Gambar"];
+    global $con;
+    $Nama = htmlspecialchars($data["Nama"]);
+    $Nim = htmlspecialchars($data["Nim"]);
+    $Email = htmlspecialchars($data["Email"]);
+    $Alamat = htmlspecialchars($data["Alamat"]);
+    $Kelas = htmlspecialchars($data["Kelas"]);
+    $Prodi = htmlspecialchars($data["Prodi"]);
+    $Gambar = htmlspecialchars($data["Gambar"]);
 
     $query = "INSERT INTO mahasiswa VALUES ('', '$Nama', '$Nim', '$Email', '$Alamat', '$Kelas', '$Prodi', '$Gambar')";
     mysqli_query($con, $query);
 
+    return mysqli_affected_rows($con);
 }
+
+function hapus($id)
+{
+    global $con;
+    mysqli_query($con, "DELETE FROM mahasiswa WHERE id = $id");
+    return mysqli_affected_rows($con);
+}
+
+
+
 ?>

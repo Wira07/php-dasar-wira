@@ -96,7 +96,7 @@ include 'functions.php';
                         <td><?= $i; ?></td>
                         <td class="d-flex align-items-center">
                             <a href="#" class="btn btn-warning btn-sm me-1">Edit</a>
-                            <a href="#" class="btn btn-danger btn-sm ms-1">Delete</a>
+                            <a href="hapus.php?id=<?= $row["id"] ?>" onclick="return confirm('Apakah Anda Yakin?'); " class="btn btn-danger btn-sm ms-1">Delete</a>
                         </td>
 
                         <td><img src="../pertemuan_9/gambar/<?php echo $row["Gambar"]; ?>" alt="Gambar Mahasiswa" class="img-thumbnail"></td>
