@@ -10,16 +10,16 @@ if (isset($id)) {
 
 if (isset($_POST["submit"])) {
 
-    $Nama = $_POST["Nama"];
-    $Nim = $_POST["Nim"];
-    $Email = $_POST["Email"];
-    $Alamat = $_POST["Alamat"];
-    $Kelas = $_POST["Kelas"];
-    $Prodi = $_POST["Prodi"];
-    $Gambar = $_POST["Gambar"];
+    // $Nama = $_POST["Nama"];
+    // $Nim = $_POST["Nim"];
+    // $Email = $_POST["Email"];
+    // $Alamat = $_POST["Alamat"];
+    // $Kelas = $_POST["Kelas"];
+    // $Prodi = $_POST["Prodi"];
+    // $Gambar = $_POST["Gambar"];
 
-    $query = "INSERT INTO mahasiswa VALUES ('', '$Nama', '$Nim', '$Email', '$Alamat', '$Kelas', '$Prodi', '$Gambar')";
-    mysqli_query($con, $query);
+    // $query = "INSERT INTO mahasiswa VALUES ('', '$Nama', '$Nim', '$Email', '$Alamat', '$Kelas', '$Prodi', '$Gambar')";
+    // mysqli_query($con, $query);
 
     if (Edit($_POST) > 0) {
         echo "<script>
