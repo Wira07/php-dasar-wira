@@ -1,5 +1,5 @@
 <?php
-$con = mysqli_connect("localhost", "root", "", "wira_sukma_saputra");
+$con = mysqli_connect("localhost", "root", "", "fkom_uniku");
 
 // ambil data dari table mahasiswa
 $mahasiswa = query("SELECT * FROM mahasiswa");
