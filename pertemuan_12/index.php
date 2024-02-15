@@ -64,6 +64,19 @@ include 'functions.php';
         /* Mengatur margin bawah tabel */
         table {
             margin-bottom: 0;
+            animation: table 1s;
+        }
+
+        @keyframes table {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
