@@ -100,7 +100,7 @@ if (isset($_POST["cari"])) {
                 <button class="btn btn-outline-secondary" type="submit" name="cari">Cari</button>
             </div>
         </form>
-        <div class="table-reponsive">
+        <div class="table-responsive">
             <table class="table table-striped">
                 <thead>
                     <tr>
@@ -116,17 +116,15 @@ if (isset($_POST["cari"])) {
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- looping untuk setiap baris data -->
                     <?php $i = 1; ?>
                     <?php foreach ($mahasiswa as $row) : ?>
                         <tr>
-                            <td><?= $i; ?></td>
+                            <td><?= $i++; ?></td>
                             <td class="d-flex align-items-center">
                                 <a href="edit.php?id=<?= $row["id"] ?>" class="btn btn-warning btn-sm ms-1">Edit</a>
-                                <a href="hapus.php?id=<?= $row["id"] ?>" onclick="return confirm('Apakah Anda Yakin?'); " class="btn btn-danger btn-sm ms-1">Delete</a>
+                                <a href="hapus.php?id=<?= $row["id"] ?>" onclick="return confirm('Apakah Anda Yakin?');" class="btn btn-danger btn-sm ms-1">Delete</a>
                             </td>
-
-                            <td><img src="gambar/<?php echo $row["Gambar"]; ?>" alt="Gambar Mahasiswa" class="img-thumbnail"></td>
+                            <td><img src="gambar/<?= $row["Gambar"]; ?>" alt="Gambar Mahasiswa" class="img-thumbnail"></td>
                             <td><?= $row["Nama"] ?></td>
                             <td><?= $row["Nim"] ?></td>
                             <td><?= $row["Email"] ?></td>
@@ -134,11 +132,11 @@ if (isset($_POST["cari"])) {
                             <td><?= $row["Kelas"] ?></td>
                             <td><?= $row["Prodi"] ?></td>
                         </tr>
-                        <?php $i++; ?>
                     <?php endforeach; ?>
                 </tbody>
             </table>
         </div>
+
 
     </div>
     <!-- Bootstrap JS -->

@@ -10,17 +10,6 @@ if (isset($id)) {
 
 if (isset($_POST["submit"])) {
 
-    // $Nama = $_POST["Nama"];
-    // $Nim = $_POST["Nim"];
-    // $Email = $_POST["Email"];
-    // $Alamat = $_POST["Alamat"];
-    // $Kelas = $_POST["Kelas"];
-    // $Prodi = $_POST["Prodi"];
-    // $Gambar = $_POST["Gambar"];
-
-    // $query = "INSERT INTO mahasiswa VALUES ('', '$Nama', '$Nim', '$Email', '$Alamat', '$Kelas', '$Prodi', '$Gambar')";
-    // mysqli_query($con, $query);
-
     if (Edit($_POST) > 0) {
         echo "<script>
         alert('Data Berhasil diedit');
@@ -84,7 +73,6 @@ if (isset($_POST["submit"])) {
         .form-label {
             font-weight: bold;
         }
-        
     </style>
 </head>
 
@@ -93,6 +81,7 @@ if (isset($_POST["submit"])) {
         <h1 class="text-center mb-4">Edit Data Mahasiswa</h1>
         <form action="" method="post" enctype="multipart/form-data">
             <input type="hidden" name="id" value="<?= $mhs['id'] ?>">
+            <input type="hidden" name="gambarLama" value="<?= $mhs['Gambar'] ?>">
             <div id="carouselExampleControls" class="carousel slide mb-4" data-bs-ride="carousel" data-bs-interval="1000">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -117,7 +106,7 @@ if (isset($_POST["submit"])) {
             <div class="mb-3 row">
                 <label for="Nama" class="col-sm-2 col-form-label form-label">Nama:</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="Nama" name="Nama" required  value="<?= $mhs['Nama'] ?>">
+                    <input type="text" class="form-control" id="Nama" name="Nama" required value="<?= $mhs['Nama'] ?>">
                 </div>
             </div>
             <div class="mb-3 row">
@@ -153,7 +142,12 @@ if (isset($_POST["submit"])) {
             <div class="mb-3 row">
                 <label for="Gambar" class="col-sm-2 col-form-label form-label">Gambar:</label>
                 <div class="col-sm-10">
-                    <img src="gambar/<?= $mhs['Gambar'] ?>" class="img-fluid w-50 h-auto">
+                    <?php if (!empty($mhs['Gambar'])) : ?>
+                        <img src="gambar/<?= $mhs['Gambar'] ?>" class="img-fluid w-50 h-auto">
+                    <?php else : ?>
+                        <!-- Tampilkan gambar default jika tidak ada gambar yang diunggah sebelumnya -->
+                        <img src="gambar/default.jpg" class="img-fluid w-50 h-auto">
+                    <?php endif; ?>
                     <input type="file" class="form-control" id="Gambar" name="Gambar">
                 </div>
             </div>
