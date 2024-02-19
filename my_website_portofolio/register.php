@@ -1,17 +1,18 @@
 <?php
-
+session_start(); // Mulai sesi
 include 'functions.php';
 
 if (isset($_POST["register"])) {
-    if (register($_POST) > 0) {
-        echo "<script>
-        alert('User baru berhasil ditambahkan');
-        </script>";
+    if ($_POST['password'] !== $_POST['confirm_password']) {
+        echo "<script>alert('Konfirmasi password tidak cocok');</script>";
     } else {
-        echo mysqli_error($con);
+        if (register($_POST) > 0) {
+            echo "<script>alert('User baru berhasil ditambahkan');</script>";
+        } else {
+            echo mysqli_error($con);
+        }
     }
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -45,7 +46,7 @@ if (isset($_POST["register"])) {
                         <h2>Welcome to Our Platform</h2>
                         <p>Please fill out the form to create an account</p>
                     </div>
-                    <form action="" method="post">
+                    <form id="register-form" action="" method="post">
                         <div class="input-group mb-3">
                             <label for="Username" class="form-label">Username</label>
                             <input type="text" id="Username" class="form-control" style="width: 500px;" placeholder="Username" name="username">
@@ -56,7 +57,7 @@ if (isset($_POST["register"])) {
                         </div>
                         <div class="input-group mb-3">
                             <label for="password" class="form-label">Confirm Password</label>
-                            <input type="password" id="password" class="form-control" style="width: 500px;" placeholder="Confirm Password" name="confirm_password">
+                            <input type="password" id="confirm_password" class="form-control" style="width: 500px;" placeholder="Confirm Password" name="confirm_password">
                         </div>
                         <div class="input-group mb-3">
                             <button class="btn btn-lg btn-primary w-100 fs-6" type="submit" name="register">Register</button>

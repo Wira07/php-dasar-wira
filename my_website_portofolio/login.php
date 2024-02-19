@@ -82,7 +82,7 @@ if (isset($_POST['login'])) {
                             <button class="btn btn-lg btn-light w-100 fs-6"><img src="../pertemuan_5/images/google.png" alt="google" style="width: 20px;"><small class="me-2">Sign In With Google</small></button>
                         </div>
                         <div class="row">
-                            <small>Don't Have Account? <a href="#">Sign Up</a></small>
+                            <small>Don't Have Account? <a href="register.php">Sign Up</a></small>
                         </div>
                     </form>
                 </div>
