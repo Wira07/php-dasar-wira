@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-if(!isset($_SESSION["login"])){
-    header("Location: login.php");
+if(isset($_SESSION["login"])){
+    header("Location: index.php");
     exit;
 }
 
@@ -10,9 +10,11 @@ include 'functions.php';
 
 if (isset($_POST["register"])) {
     if (register($_POST) > 0) {
+        
         echo "<script>
         alert('User baru berhasil ditambahkan');
         </script>";
+
     } else {
         echo mysqli_error($con);
     }
