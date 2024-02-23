@@ -8,7 +8,7 @@ if(isset($_SESSION["login"])){
 
 include 'functions.php';
 
-if (isset($_POST["register"])) {
+if (isset($_POST["register"])) {    
     if (register($_POST) > 0) {
         
         echo "<script>

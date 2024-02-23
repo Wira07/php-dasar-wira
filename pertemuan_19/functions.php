@@ -152,7 +152,7 @@ function cari($keyword)
     return query($query);
 }
 
-function register($data)
+function register($data)    
 {
     global $con;
     $username = strtolower(stripslashes($data["username"]));
